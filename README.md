@@ -44,7 +44,7 @@ First you need to know what host your docker compose is running on. On my machin
               \____\_______/
 
 
-docker is configured to use the default machine with IP ***192.168.99.100***
+docker is configured to use the default machine with IP 192.168.99.100
 For help getting started, check out the docs at https://docs.docker.com
 ```
 
