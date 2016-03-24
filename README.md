@@ -48,7 +48,11 @@ For help getting started, check out the docs at https://docs.docker.com
 
 I can now hit the following URL to inspect Consul:
 
-http://192.168.99.100:8500/ui
+`http://192.168.99.100:8500/ui`
+
+***You will need to replace the ip address above with whatever ip your docker host is running on.*** For example:
+
+`http://<your-docker-host>:8500/ui`
 
 You can inspect your running services and service instances in the "Services" item in the Consul UI menu.
 
@@ -56,15 +60,27 @@ You can inspect your running services and service instances in the "Services" it
 
 The microservice consumer is our entry-point to inspecting our running services themselves. If you hit the following URL you will be able to see your running microservice consumer:
 
-http://192.168.99.100:8090/
+`http://<your-docker-host>:8090`
+
+On my machine as I write this, this interprets to:
+
+`http://192.168.99.100:8090/`
 
 All good so far. To see the status of consul connections and hystrix circuit-breaker and client-side load balancing status and other health metrics about your service just hit the `health` endpoint instead:
 
-http://192.168.99.100:8090/health
+`http://<your-docker-host>:8090/health`
+
+On my machine as I write this, this interprets to:
+
+`http://192.168.99.100:8090/health`
 
 Finally hit the following URL to see all the client-side load-balanced microservices that have been discovered:
 
-http://192.168.99.100:8090/discoveredServiceInstances
+`http://<your-docker-host>:8090/discoveredServiceInstances`
+
+On my machine as I write this, this interprets to:
+
+`http://192.168.99.100:8090/discoveredServiceInstances`
 
 ## Getting Antifragile by Stressing the System
 
