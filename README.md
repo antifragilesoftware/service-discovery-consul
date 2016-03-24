@@ -33,6 +33,7 @@ Once your docker containers are running you can inspect Consul to see what servi
 
 First you need to know what host your docker compose is running on. On my machine I simply open a new Docker Quickstart Terminal and the ip address of the docker host is displayed as shown below:
 
+````
                         ##         .
                   ## ## ##        ==
                ## ## ## ## ##    ===
@@ -45,6 +46,7 @@ First you need to know what host your docker compose is running on. On my machin
 
 docker is configured to use the default machine with IP ***192.168.99.100***
 For help getting started, check out the docs at https://docs.docker.com
+```
 
 I can now hit the following URL to inspect Consul:
 
