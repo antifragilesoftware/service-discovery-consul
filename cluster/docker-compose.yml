@@ -53,7 +53,7 @@ services:
     command: ["agent", "-data-dir=/tmp/consul", "-node=consul4", "-join=consul1"]
 
   microservice1:
-    image: antifragilesoftware/simple-boot-microservice:0.0.1
+    image: antifragilesoftware/simple-boot-microservice
     container_name: microservice1
     ports:
      - "8080:8080"
@@ -64,7 +64,7 @@ services:
     command: ["java","--spring.cloud.consul.host=consul1","-Djava.security.egd=file:/dev/./urandom","-jar","/microservice.jar"]
 
   microservice2:
-    image: antifragilesoftware/simple-boot-microservice:0.0.1
+    image: antifragilesoftware/simple-boot-microservice
     container_name: microservice2
     ports:
      - "8081:8080"
@@ -75,7 +75,7 @@ services:
     command: ["java","--spring.cloud.consul.host=consul1","-Djava.security.egd=file:/dev/./urandom","-jar","/microservice.jar"]
 
   microserviceconsumer:
-    image: antifragilesoftware/simple-boot-microservice-consumer:0.0.1
+    image: antifragilesoftware/simple-boot-microservice-consumer
     container_name: microserviceconsumer
     ports:
      - "8090:8080"
