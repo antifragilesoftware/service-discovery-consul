@@ -3,7 +3,7 @@ networks:
   micronet:
 services:
   consul1:
-    image: gliderlabs/consul
+    image: consul
     container_name: consul1
     ports:
      - "8400:8400"

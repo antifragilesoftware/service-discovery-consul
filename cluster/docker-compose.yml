@@ -3,7 +3,7 @@ networks:
   micronet:
 services:
   consul1:
-    image: gliderlabs/consul
+    image: consul
     container_name: consul1
     ports:
      - "8400:8400"
@@ -14,7 +14,7 @@ services:
     command: ["agent", "-server", "-bootstrap-expect=1", "-data-dir=/tmp/consul", "-node=consul1", "-client=0.0.0.0", "-ui"]
 
   consul2:
-    image: "gliderlabs/consul"
+    image: "consul"
     container_name: consul2
     ports:
       - "8400"
@@ -27,7 +27,7 @@ services:
     command: ["agent", "-server", "-data-dir=/tmp/consul", "-node=consul2", "-join=consul1"]
 
   consul3:
-    image: "gliderlabs/consul"
+    image: "consul"
     container_name: consul3
     ports:
       - "8400"
@@ -40,7 +40,7 @@ services:
     command: ["agent", "-server", "-data-dir=/tmp/consul", "-node=consul3", "-join=consul1"]
 
   consul4:
-    image: "gliderlabs/consul"
+    image: "consul"
     container_name: consul4
     ports:
       - "8400"
